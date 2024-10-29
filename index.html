@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Persegi Panjang</title>
+</head>
+<body>
+    <h1>PROGRAM MENGHITUNG LUAS DAN KELILING PERSEGI PANJANG</h1>
+
+    <form action="/calculate" method="POST">
+        <div>
+            <label for="panjang">Masukkan panjang:</label>
+            <input type="number" name="panjang" id="panjang" required>
+        </div>
+        <br>
+        <div>
+            <label for="lebar">Masukkan lebar:</label>
+            <input type="number" name="lebar" id="lebar" required>
+        </div>
+        <br>
+        <div>
+            <label>Pilih perhitungan:</label>
+            <select name="pilihan" required>
+                <option value="1">Luas</option>
+                <option value="2">Keliling</option>
+                <option value="3">Luas dan Keliling</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit">Hitung</button>
+    </form>
+
+    {% if hasil %}
+    <h2>Hasil:</h2>
+    <p>{{ proses }}</p>
+    <p>{{ hasil }}</p>
+    {% endif %}
+</body>
+</html>

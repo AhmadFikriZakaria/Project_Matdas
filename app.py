@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')  # Ubah template_folder ke direktori saat ini
 
 def luas_persegi_panjang(panjang, lebar):
     return panjang * lebar
